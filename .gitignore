@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build outputs
+out/
+dist/
+lib/
+
+# VS Code test run artifacts
+.vscode-test/
+
+# packaged extension
+*.vsix
+
+# misc
+.DS_Store
+Thumbs.db
+*.log
+coverage/
+.nyc_output/
+.vscode/
+*.mjs
+
