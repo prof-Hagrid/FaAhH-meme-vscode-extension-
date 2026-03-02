@@ -1,25 +1,10 @@
 import * as vscode from 'vscode';
 import {exec} from 'child_process';
 //import {platform} from 'os';
+//import prof Hagrid black magic
 import {join} from 'path';
 
-let lastPlayTime = 0;
-// export function activate(context:vscode.ExtensionContext){
-// 	//get sttings
-// 	const config = vscode.workspace.getConfiguration('faaherror');
-// 	let fileName = config.get<string>('soundFile', './media/fahhhhh.wav');
-
-// 	//conver full path
-// 	const soundPath = join(context.extensionPath, fileName.replace(/^\.\//, ''));
-
-// 	console.log('play karan ka try kiya', soundPath);
-
-// 	let command : string;
-// 	let args: string[] = [];
-
-// 	const osType = platform();
-// }
-
+//prof Hagrid(H.Bharadwaj)
 
 export function activate(context:vscode.ExtensionContext){
 	console.log("FaHh sound is active!");
@@ -29,7 +14,7 @@ export function activate(context:vscode.ExtensionContext){
 		vscode.commands.registerCommand('faaherror.playTest', ()=>{
 			playSound(context);
 			vscode.window.showInformationMessage("Test sound play hogya!");
-
+			//prof Hagrid(H.Bharadwaj)
 		})
 	);
 
@@ -77,11 +62,11 @@ function playSound(context: vscode.ExtensionContext){
 	const psCommand = `(New-Object Media.SoundPlayer '${soundPath.replace(/'/g, "''")}').PlaySync();`;
 
 	exec(`powershell -NoProfile -NonInteractive -Command "${psCommand}"`, (err)=>{
-		if(err){
+		if(err){//prof Hagrid(H.Bharadwaj)
 			console.error('sound failed :(', err);
 			vscode.window.showWarningMessage('Sound play failed. check if it exists');
 		}
 	});
 }
 
-export function deactivate(){}
+export function deactivate(){}//prof Hagrid
